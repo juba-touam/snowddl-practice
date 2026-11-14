@@ -11,3 +11,18 @@ dbt_runner:
   business_roles:
     - dbt_runner
   comment: "Compte de service dbt (authentification par cle RSA)"
+
+airbyte_loader:
+  type: SERVICE
+  rsa_public_key: >-
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0P+cKO4l8tlA3FlD7y1G
+    104sKldpCKSKAPRBIqErRFywSBCNmDfuJZVRBinXJvTDcZEubyKRdNT9sEvOfZEK
+    ucDscZ3iY6WUu52CTl1yST8uI48kwY7ncsJkXkrpKhbUu5rxHfshX7UqzypzuvxX
+    +yWUSt6NYg7US3C7URUk1GxKcrNG4R0yWs9KSpfa6BReh1AvG1qy9/VjomR/kmoH
+    FuZQbkXW7yPbTgXh5xEC72FW4QL76oLP/BkTHZvVkEG5S/GxSXV5Z+lc/TQxGyIJ
+    qrlXLlH4pryRxkdivt+lngg/fG9AgFKrnYiN9nUGFu/F5lNFzlrW2MSMveEwZFeD
+    ZwIDAQAB
+  default_warehouse: load_wh
+  business_roles:
+    - data_engineer
+  comment: "Compte de service Airbyte, charge les donnees brutes dans bronze.raw (authentification par cle RSA)"
