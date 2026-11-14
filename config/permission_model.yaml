@@ -1,0 +1,4 @@
+INGESTION:
+  inherit_from: DEFAULT
+  owner_create_grants:
+    - STAGE
