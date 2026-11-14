@@ -1,0 +1,13 @@
+dbt_runner:
+  type: SERVICE
+  rsa_public_key: >-
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmPGKXgygCBzq8u8PDchFrXvDDJNmH
+    +UsEL5z1ygw0qF98Y2SXg/8o37x7ra2zIOVMUdYBvk8D0rKsSeY8u3Bh16sk6qtXEHP6XlUcd
+    tlmzAisAq9VrKKUUkD9o9pOvGviYJLFdHimlu5Yn2KPjtO3hSp1PS9szrFRIs80NVrlPwy+pk
+    0J1pc2UgLf7zUkCRDgEmm3OokrijjX4vbOlS1cIpqxC7i4CoERyX2CUU73yVoQGF6jpvZLZ0J
+    JFX5mMjak8IyRr1NsOy97jf7AsOz9LgdbaDKvo9hJwjOdwpYTPYw3p1CNfnsMcSlmuYqWGfyN
+    mNcD0BB6oCmwNdDuO7Y8QIDAQAB
+  default_warehouse: transform_wh
+  business_roles:
+    - dbt_runner
+  comment: "Compte de service dbt (authentification par cle RSA)"

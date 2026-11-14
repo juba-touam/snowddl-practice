@@ -1,0 +1,23 @@
+data_engineer:
+  schema_owner:
+    - BRONZE_DB.RAW
+  warehouse_usage:
+    - load_wh
+  comment: "Ingestion et recreation des tables brutes dans la couche bronze"
+
+dbt_runner:
+  schema_read:
+    - BRONZE_DB.RAW
+  schema_owner:
+    - SILVER_DB.CLEANED
+    - GOLD_DB.MARTS
+  warehouse_usage:
+    - transform_wh
+  comment: "Compte de service dbt, materialise silver et gold depuis bronze"
+
+analyst:
+  schema_read:
+    - GOLD_DB.MARTS
+  warehouse_usage:
+    - analytics_wh
+  comment: "Lecture seule sur les donnees finales (marts) pour le BI"
