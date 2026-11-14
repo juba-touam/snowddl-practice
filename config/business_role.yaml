@@ -1,6 +1,7 @@
 data_engineer:
   schema_owner:
     - BRONZE_DB.RAW
+    - BRONZE_DB.AIRBYTE_INTERNAL
   warehouse_usage:
     - load_wh
   comment: "Ingestion et recreation des tables brutes dans la couche bronze"
