@@ -1,4 +1,5 @@
 INGESTION:
   inherit_from: DEFAULT
+  ruleset: DATABASE_OWNER
   owner_create_grants:
     - STAGE

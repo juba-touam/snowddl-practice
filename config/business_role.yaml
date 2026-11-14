@@ -1,10 +1,9 @@
 data_engineer:
-  schema_owner:
-    - BRONZE_DB.RAW
-    - BRONZE_DB.AIRBYTE_INTERNAL
+  database_owner:
+    - BRONZE_DB
   warehouse_usage:
     - load_wh
-  comment: "Ingestion et recreation des tables brutes dans la couche bronze"
+  comment: "Ingestion et recreation des tables brutes dans la couche bronze. Owner au niveau database (pas schema) pour que Airbyte puisse creer ses propres schemas (CREATE SCHEMA)"
 
 dbt_runner:
   schema_read:
