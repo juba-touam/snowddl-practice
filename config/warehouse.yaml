@@ -1,0 +1,20 @@
+load_wh:
+  size: XSMALL
+  auto_suspend: 60
+  min_cluster_count: 1
+  max_cluster_count: 1
+  comment: "Ingestion brute vers la couche bronze (ETL/EL)"
+
+transform_wh:
+  size: XSMALL
+  auto_suspend: 60
+  min_cluster_count: 1
+  max_cluster_count: 1
+  comment: "Transformations bronze -> silver -> gold (dbt)"
+
+analytics_wh:
+  size: XSMALL
+  auto_suspend: 60
+  min_cluster_count: 1
+  max_cluster_count: 1
+  comment: "Requetes BI / analystes sur la couche gold"
