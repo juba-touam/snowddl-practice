@@ -18,6 +18,12 @@ jobs:
           python-version: "3.11"
       - run: pip install snowddl
       - run: snowddl -c config validate
+        env:
+          # validate never connects to Snowflake, but the CLI still checks
+          # that auth-looking args are present before dispatching the action
+          SNOWFLAKE_ACCOUNT: unused
+          SNOWFLAKE_USER: unused
+          SNOWFLAKE_PASSWORD: unused
 
   plan:
     needs: validate
