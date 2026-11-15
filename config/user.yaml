@@ -26,3 +26,18 @@ airbyte_loader:
   business_roles:
     - data_engineer
   comment: "Compte de service Airbyte, charge les donnees brutes dans bronze.raw (authentification par cle RSA)"
+
+metabase_reader:
+  type: SERVICE
+  rsa_public_key: >-
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAllqP1V6TrOR3hmyj/QVr
+    NIP/4yajVnDP7+QQEdYu+LMX8ADc971GCPMGzW5xA4TqzUvhATcDCQH7CFWjjZMs
+    +K90508D7axlICL8TENpRBH3u+Q7x7VlKehng8p//p2sP77xmXjNoxNTYCRsQs5Z
+    tUIfcY5u25MT8j0RDTXbIH+gvRHs6Ri+sVeM6UnJSnaCv58lk3ZzMR9KFpwwvxQp
+    r77GbJ0c1JxtRqlMHBV4CwfUsfWqC7W5si9XUPuHvanRkmsO7telAPlnLgI8VW/h
+    u75mE/zmX2sQmCtoJNF89El3J0wU22klomgIqZFvNyUUpNKz4sdGAvKP82CwO0RO
+    OQIDAQAB
+  default_warehouse: analytics_wh
+  business_roles:
+    - analyst
+  comment: "Compte de service Metabase, lecture seule sur gold.marts pour le dashboard (authentification par cle RSA)"
