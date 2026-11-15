@@ -21,3 +21,12 @@ analyst:
   warehouse_usage:
     - analytics_wh
   comment: "Lecture seule sur les donnees finales (marts) pour le BI"
+
+monitor:
+  schema_read:
+    - BRONZE_DB.RAW
+    - SILVER_DB.CLEANED
+    - GOLD_DB.MARTS
+  warehouse_usage:
+    - analytics_wh
+  comment: "Lecture seule sur les 3 couches, pour verifier volumes/fraicheur depuis Airflow"

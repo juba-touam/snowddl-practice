@@ -41,3 +41,18 @@ metabase_reader:
   business_roles:
     - analyst
   comment: "Compte de service Metabase, lecture seule sur gold.marts pour le dashboard (authentification par cle RSA)"
+
+airflow_monitor:
+  type: SERVICE
+  rsa_public_key: >-
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkfMMN5xQ3OwjpwUH82Xo
+    MUZYwB1OMjiHWTODI2zZIHy8E8PeAznI3zjZr4RV7BZw6qAEURF8cVULasoL52aT
+    UanCbeZ+hR+3QafH12ejOTul0ih2UZEC052v/WaaQWgfMvcW//v0Hlq5OPTKO6MM
+    kei/C8LRg0pLCNxkSE45tuib0K0E8qIXe1h5NPl9DS06u3WmDrkBa323uved2D7t
+    P1+GJKLPiC0cwK7zq3GqGbWBwDRMJ7KCqV86G7I5ZGxrhesCN0M862bylcehUrpT
+    WI9prTJ5w27gQv65FdNhrRB5+Zz9Mgzh9Me+SP+zwsC44jd6n9Y8FZBoJNskxG2C
+    cwIDAQAB
+  default_warehouse: analytics_wh
+  business_roles:
+    - monitor
+  comment: "Compte de service Airflow, verifie volumes/fraicheur bronze-silver-gold (authentification par cle RSA)"
