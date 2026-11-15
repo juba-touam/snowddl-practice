@@ -8,12 +8,12 @@ data_engineer:
 dbt_runner:
   schema_read:
     - BRONZE_DB.RAW
-  schema_owner:
-    - SILVER_DB.CLEANED
-    - GOLD_DB.MARTS
+  database_owner:
+    - SILVER_DB
+    - GOLD_DB
   warehouse_usage:
     - transform_wh
-  comment: "Compte de service dbt, materialise silver et gold depuis bronze"
+  comment: "Compte de service dbt, materialise silver et gold depuis bronze. Owner au niveau database (pas schema) pour que dbt puisse creer ses propres schemas (CREATE SCHEMA)"
 
 analyst:
   schema_read:
